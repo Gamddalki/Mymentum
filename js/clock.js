@@ -17,11 +17,11 @@ function getClock() {
     hours -= 12;
   }
 
-  String(hours).padStart(2, "0");
-  String(minutes).padStart(2, "0");
-  String(seconds).padStart(2, "0");
+  const hur = String(hours).padStart(2, "0");
+  const min = String(minutes).padStart(2, "0");
+  const sec = String(seconds).padStart(2, "0");
 
-  clock.innerText = `${ampm} ${hours}:${minutes}:${seconds}`;
+  clock.innerText = `${ampm} ${hur}:${min}:${sec}`;
 }
 
 getClock();
