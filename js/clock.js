@@ -2,8 +2,8 @@ const clock = document.querySelector("h2#clock");
 
 function getClock() {
   const date = new Date();
-  let ampm = "AM";
-  const hours = date.getHours();
+  let ampm = "";
+  let hours = date.getHours();
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
 
@@ -13,6 +13,7 @@ function getClock() {
   } else if (hours === 12) {
     ampm = "PM";
   } else if (hours > 12) {
+    ampm = "PM";
     hours -= 12;
   }
 
