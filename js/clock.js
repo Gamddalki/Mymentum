@@ -10,6 +10,8 @@ function getClock() {
   if (hours === 0) {
     ampm = "AM";
     hours += 12;
+  } else if (hours < 12) {
+    ampm = "AM";
   } else if (hours === 12) {
     ampm = "PM";
   } else if (hours > 12) {
