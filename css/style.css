@@ -14,12 +14,13 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 350px 0px 250px 0px;
-  font-weight: 500;
-  font-size: 60px;
 }
 
-#login-form {
+#clock {
+  font-weight: 500;
+  font-size: 80px;
 }
 
 #login-form input {
@@ -27,6 +28,7 @@ body {
   font-size: 20px;
   padding: 10px 0px;
   background-color: transparent;
+  color: white;
 }
 
 #login-form input::placeholder {
@@ -40,6 +42,7 @@ body {
 
 #login-form input:focus {
   border-color: white;
+  outline: none;
   transition: border-color 0.1s ease-in-out;
 }
 
@@ -52,6 +55,8 @@ body {
 
 #greeting {
   text-align: center;
+  font-weight: 300;
+  font-size: 35px;
 }
 
 #quote {
@@ -60,4 +65,16 @@ body {
   flex-direction: column;
   bottom: 0;
   font-weight: 300;
+  position: fixed;
+  width: 100%;
+  padding: 0px 0px 50px 0px;
+}
+
+#quote span:first-child {
+  font-size: 20px;
+  margin: 5px;
+}
+
+#quote span:last-child {
+  font-size: 15px;
 }
