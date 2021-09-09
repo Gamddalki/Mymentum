@@ -14,7 +14,7 @@ function paintTodo(newTodo) {
   const span = document.createElement("span");
   li.appendChild(span);
   span.innerText = newTodo;
-  todoList.appendChild(newTodo);
+  todoList.appendChild(li);
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
