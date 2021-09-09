@@ -17,4 +17,4 @@ function paintTodo(newTodo) {
   todoList.appendChild(newTodo);
 }
 
-todoForm.addEventListener("submit", handleToDoSubmit);
+todoForm.addEventListener("submit", handleTodoSubmit);
