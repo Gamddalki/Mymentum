@@ -10,6 +10,11 @@ function handleTodoSubmit(event) {
   todoInput.value = "";
   todos.push(newTodo);
   paintTodo(newTodo);
+  saveTodos();
+}
+
+function saveTodos() {
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 
 function paintTodo(newTodo) {
