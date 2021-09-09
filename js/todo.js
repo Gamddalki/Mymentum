@@ -6,6 +6,7 @@ function handleTodoSubmit(event) {
   event.preventDefault();
   const newTodo = todoInput.value;
   todoInput.value = "";
+  paintTodo(newTodo);
 }
 
 function paintTodo(newTodo) {
