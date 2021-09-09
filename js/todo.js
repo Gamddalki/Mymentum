@@ -22,18 +22,21 @@ function paintTodo(newTodo) {
   const span = document.createElement("span");
   const don = document.createElement("button");
   const del = document.createElement("button");
-  span.innerText = newTodo;
-  don.innerText = "✔";
+  don.innerText = "ㅁ";
   don.addEventListener("click", donTodo);
+  span.innerText = newTodo;
   del.innerText = "❌";
   del.addEventListener("click", delTodo);
-  li.appendChild(span);
   li.appendChild(don);
+  li.appendChild(span);
   li.appendChild(del);
   todoList.appendChild(li);
 }
 
-function donTodo(event) {}
+function donTodo(event) {
+  const don = event.target.parentElement;
+  don.innerText = "✔";
+}
 
 function delTodo(event) {
   const li = event.target.parentElement;
