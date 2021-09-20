@@ -27,7 +27,8 @@ function paintTodo(newTodo) {
   don.innerText = "ㅁ";
   don.addEventListener("click", donTodo);
   span.innerText = newTodo;
-  del.innerText = "❌";
+  del.innerText = "X";
+  //del.innerHTML += `<i class="fa-solid fa-square"></i>`;
   del.addEventListener("click", delTodo);
   li.appendChild(don);
   li.appendChild(span);
