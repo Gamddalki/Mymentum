@@ -10,8 +10,12 @@ function handleTodoSubmit(event) {
   event.preventDefault();
   const newTodo = todoInput.value;
   todoInput.value = "";
-  todos.push(newTodo);
-  paintTodo(newTodo);
+  const newTodoObj = {
+    text: newTodo,
+    id: Date.now(),
+  };
+  todos.push(newTodoObj);
+  paintTodo(newTodoObj);
   saveTodos();
 }
 
@@ -21,12 +25,13 @@ function saveTodos() {
 
 function paintTodo(newTodo) {
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
   const don = document.createElement("button");
   const del = document.createElement("button");
   don.innerText = "ㅁ";
   don.addEventListener("click", donTodo);
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
   del.innerText = "X";
   //del.innerHTML += `<i class="fa-solid fa-square"></i>`;
   del.addEventListener("click", delTodo);
