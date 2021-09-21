@@ -49,6 +49,8 @@ function donTodo(event) {
 function delTodo(event) {
   const li = event.target.parentElement;
   li.remove();
+  todos = todos.filter((todo) => todo.id !== parseInt(li.id));
+  saveTodos();
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
