@@ -27,23 +27,13 @@ function paintTodo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
   const span = document.createElement("span");
-  const don = document.createElement("button");
   const del = document.createElement("button");
-  don.innerText = "ㅁ";
-  don.addEventListener("click", donTodo);
   span.innerText = newTodo.text;
   del.innerText = "X";
-  //del.innerHTML += `<i class="fa-solid fa-square"></i>`;
   del.addEventListener("click", delTodo);
-  li.appendChild(don);
   li.appendChild(span);
   li.appendChild(del);
   todoList.appendChild(li);
-}
-
-function donTodo(event) {
-  const don = event.target;
-  don.innerText = "✔";
 }
 
 function delTodo(event) {

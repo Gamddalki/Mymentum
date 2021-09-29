@@ -22,7 +22,17 @@ function onLoginSubmit(event) {
 }
 
 function showGreetings(username) {
-  grettings.innerText = `Hello, ${username}!`;
+  const date = new Date();
+  const sun = date.getHours();
+  if (sun >= 0 && sun < 6) {
+    grettings.innerText = `Good night, ${username}!`;
+  } else if (sun >= 6 && sun < 12) {
+    grettings.innerText = `Good morning, ${username}!`;
+  } else if (sun >= 12 && sun < 18) {
+    grettings.innerText = `Good afternoon, ${username}!`;
+  } else if (sun >= 18) {
+    grettings.innerText = `Good evening, ${username}!`;
+  }
   grettings.classList.remove(HIDDEN_CLASS);
 }
 
