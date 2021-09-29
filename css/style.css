@@ -12,6 +12,59 @@ body {
 
 /*--------------------*/
 
+#dday-form input {
+  border: none;
+  font-size: 15px;
+  padding: 5px 0px;
+  background-color: transparent;
+  color: white;
+}
+
+#dday-form input::placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#dday-form input:focus {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  outline: none;
+  transition: border-color 0.1s ease-in-out;
+}
+
+#dday-form input[type="submit"] {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+  cursor: pointer;
+}
+
+#dday {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  font-weight: 300;
+  position: fixed;
+  width: 100%;
+  padding: 50px 0px 0px 0px;
+}
+
+#dday-title {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+#dday-counter {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+/*--------------------*/
+
 #title {
   display: flex;
   flex-direction: column;
@@ -35,16 +88,12 @@ body {
 }
 
 #login-form input::placeholder {
+  text-align: center;
   color: rgba(255, 255, 255, 0.6);
 }
 
-#login-form input:not([type="submit"]) {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-  transition: border-color 0.1s ease-in-out;
-}
-
 #login-form input:focus {
-  border-color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
   outline: none;
   transition: border-color 0.1s ease-in-out;
 }
@@ -81,18 +130,14 @@ body {
 }
 
 #todo-form input::placeholder {
+  text-align: center;
   color: rgba(255, 255, 255, 0.6);
 }
 
-#login-form input:not([type="submit"]) {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-  transition: border-color 0.1s ease-in-out;
-}
-
 #todo-form input:focus {
-  border-color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
   outline: none;
-  transition: border-color 0.1s ease-in-out;
+  transition: border-color 0.1s ease-in;
 }
 
 #todo button {
@@ -100,9 +145,6 @@ body {
   border: none;
   outline: none;
   color: white;
-}
-
-.fa-solid {
 }
 
 /*--------------------*/

@@ -8,6 +8,26 @@
     <title>Mymentum</title>
   </head>
   <body>
+    <div id="dday">
+      <form id="dday-form" class="hidden" autocomplete="off">
+        <input
+          id="dday-title-input"
+          required
+          type="text"
+          placeholder="Any special plan?"
+        /><br />
+        <input
+          id="dday-date-input"
+          required
+          minlength="10"
+          maxlength="10"
+          placeholder="YYYY-MM-DD"
+        />
+        <input type="submit" class="hidden" />
+      </form>
+      <span id="dday-title" class="hidden"></span>
+      <span id="dday-counter" class="hidden"></span>
+    </div>
     <div id="title">
       <span id="clock"></span>
       <span id="greeting" class="hidden"></span>
@@ -39,6 +59,7 @@
     <script src="js/quote.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/dday.js"></script>
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
