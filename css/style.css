@@ -12,6 +12,23 @@ body {
 
 /*--------------------*/
 
+#weather {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  font-weight: 300;
+  position: fixed;
+  padding: 50px 0px 0px 80px;
+}
+
+#weather span:first-child {
+  padding: 5px 0px;
+}
+
+/*--------------------*/
+
 #dday-form input {
   border: none;
   font-size: 15px;
@@ -55,6 +72,7 @@ body {
   text-align: center;
   font-weight: 300;
   font-size: 20px;
+  padding: 5px 0px;
 }
 
 #dday-counter {
